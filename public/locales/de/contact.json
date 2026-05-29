@@ -1,0 +1,13 @@
+{
+  "title": "Kontaktieren Sie uns",
+  "description": "Setzen Sie sich heute mit uns in Verbindung.",
+  "form": {
+    "name": "Name",
+    "email": "E-Mail",
+    "message": "Nachricht",
+    "send": "Nachricht senden",
+    "sending": "Wird gesendet...",
+    "success": "Nachricht erfolgreich versendet!",
+    "error": "Fehler beim Versenden der Nachricht. Bitte versuchen Sie es erneut."
+  }
+}

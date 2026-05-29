@@ -1,0 +1,14 @@
+{
+  "nav": {
+    "home": "Home",
+    "projects": "Projects",
+    "about": "About Us",
+    "contact": "Contact",
+    "admin": "Admin",
+    "logout": "Logout"
+  },
+  "language": "Language",
+  "footer": {
+    "copyright": "© 2026 Sblueenergy. All rights reserved."
+  }
+}

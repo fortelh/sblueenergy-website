@@ -1,0 +1,20 @@
+{
+  "title": "Admin-Dashboard",
+  "login": "Admin-Anmeldung",
+  "username": "Benutzername",
+  "password": "Passwort",
+  "signin": "Anmelden",
+  "dashboard": "Dashboard",
+  "editHome": "Startseite bearbeiten",
+  "editAbout": "Über Uns bearbeiten",
+  "manageProjects": "Projekte verwalten",
+  "contactSettings": "Kontakteinstellungen",
+  "save": "Änderungen speichern",
+  "delete": "Löschen",
+  "edit": "Bearbeiten",
+  "create": "Neu erstellen",
+  "cancel": "Abbrechen",
+  "confirmDelete": "Sind Sie sicher, dass Sie dieses Element löschen möchten?",
+  "saved": "Änderungen erfolgreich gespeichert!",
+  "error": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut."
+}
