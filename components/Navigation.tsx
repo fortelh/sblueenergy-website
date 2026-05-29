@@ -2,6 +2,7 @@ import { useTranslation } from 'next-i18next';
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import { useState } from 'react';
+import SblueenergyLogo from './SblueenergyLogo';
 
 export default function Navigation() {
   const { t } = useTranslation('common');
@@ -16,11 +17,15 @@ export default function Navigation() {
   };
 
   return (
-    <nav className="bg-white shadow-lg">
+    <nav className="bg-white shadow-lg sticky top-0 z-50">
       <div className="container-custom flex justify-between items-center py-4">
-        {/* Logo */}
-        <Link href="/" className="text-2xl font-bold text-blue-600">
-          Sblueenergy
+        {/* Logo and Brand */}
+        <Link href="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
+          <SblueenergyLogo size="md" />
+          <div>
+            <h1 className="text-xl font-bold text-blue-600">Sblueenergy</h1>
+            <p className="text-xs text-green-600 font-semibold">Renewable Energy</p>
+          </div>
         </Link>
 
         {/* Mobile Menu Toggle */}
@@ -34,19 +39,19 @@ export default function Navigation() {
         </button>
 
         {/* Menu */}
-        <div className={`${isOpen ? 'block' : 'hidden'} md:flex gap-8 items-center`}>
+        <div className={`${isOpen ? 'block' : 'hidden'} md:flex gap-8 items-center absolute md:static top-full left-0 right-0 bg-white md:bg-transparent p-4 md:p-0 shadow-lg md:shadow-none`}>
           {!isAdmin && (
             <>
-              <Link href="/" className="hover:text-blue-600 transition-colors">
+              <Link href="/" className="hover:text-blue-600 transition-colors font-medium">
                 {t('nav.home')}
               </Link>
-              <Link href="/projects" className="hover:text-blue-600 transition-colors">
+              <Link href="/projects" className="hover:text-blue-600 transition-colors font-medium">
                 {t('nav.projects')}
               </Link>
-              <Link href="/about" className="hover:text-blue-600 transition-colors">
+              <Link href="/about" className="hover:text-blue-600 transition-colors font-medium">
                 {t('nav.about')}
               </Link>
-              <Link href="/contact" className="hover:text-blue-600 transition-colors">
+              <Link href="/contact" className="hover:text-blue-600 transition-colors font-medium">
                 {t('nav.contact')}
               </Link>
               <Link href="/admin/login" className="text-blue-600 hover:text-blue-800 font-semibold">
@@ -81,9 +86,9 @@ function LanguageSwitcher() {
   return (
     <button
       onClick={toggleLanguage}
-      className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 font-medium transition-colors"
+      className="bg-gradient-to-r from-blue-600 to-green-500 text-white px-4 py-2 rounded-lg hover:shadow-lg font-medium transition-all"
     >
-      {i18n.language === 'en' ? 'DE' : 'EN'}
+      {i18n.language === 'en' ? 'DE 🇩🇪' : 'EN 🇬🇧'}
     </button>
   );
 }
